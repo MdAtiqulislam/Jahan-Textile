@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" columnCount="3" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="185" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a182953f-310b-44bb-9d3b-78057854a692">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     sallery.`id` AS sallery_id,
+     sallery.`card_no` AS sallery_card_no,
+     sallery.`name` AS sallery_name,
+     sallery.`designation` AS sallery_designation,
+     sallery.`department` AS sallery_department,
+     sallery.`shift` AS sallery_shift,
+     sallery.`work_hour` AS sallery_work_hour,
+     sallery.`fol_production` AS sallery_fol_production,
+     sallery.`fol_rate` AS sallery_fol_rate,
+     sallery.`daily_all` AS sallery_daily_all,
+     sallery.`basic` AS sallery_basic,
+     sallery.`total_payable` AS sallery_total_payable,
+     sallery.`hr_deductiom` AS sallery_hr_deductiom,
+     sallery.`att_allow` AS sallery_att_allow,
+     sallery.`night_allow` AS sallery_night_allow,
+     sallery.`looms` AS sallery_looms,
+     sallery.`product` AS sallery_product,
+     sallery.`production` AS sallery_production,
+     sallery.`net_payable` AS sallery_net_payable,
+     sallery.`week_start_date` AS sallery_week_start_date,
+     sallery.`week_end_date` AS sallery_week_end_date,
+     sallery.`pay_date` AS sallery_pay_date
+FROM
+     `sallery` sallery]]>
+	</queryString>
+	<field name="sallery_id" class="java.lang.Integer"/>
+	<field name="sallery_card_no" class="java.lang.Integer"/>
+	<field name="sallery_name" class="java.lang.String"/>
+	<field name="sallery_designation" class="java.lang.String"/>
+	<field name="sallery_department" class="java.lang.String"/>
+	<field name="sallery_shift" class="java.lang.String"/>
+	<field name="sallery_work_hour" class="java.lang.Double"/>
+	<field name="sallery_fol_production" class="java.lang.Integer"/>
+	<field name="sallery_fol_rate" class="java.lang.Double"/>
+	<field name="sallery_daily_all" class="java.lang.Double"/>
+	<field name="sallery_basic" class="java.lang.Double"/>
+	<field name="sallery_total_payable" class="java.lang.Integer"/>
+	<field name="sallery_hr_deductiom" class="java.lang.Integer"/>
+	<field name="sallery_att_allow" class="java.lang.Double"/>
+	<field name="sallery_night_allow" class="java.lang.Double"/>
+	<field name="sallery_looms" class="java.lang.String"/>
+	<field name="sallery_product" class="java.lang.String"/>
+	<field name="sallery_production" class="java.lang.Integer"/>
+	<field name="sallery_net_payable" class="java.lang.Integer"/>
+	<field name="sallery_week_start_date" class="java.lang.String"/>
+	<field name="sallery_week_end_date" class="java.lang.String"/>
+	<field name="sallery_pay_date" class="java.sql.Date"/>
+	<detail>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="737de61c-57fa-4635-8f7c-c082416064a6"/>
+				<text><![CDATA[sallery_id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="20" width="100" height="20" uuid="8c3a07da-12da-4231-8873-63494e93351e"/>
+				<textFieldExpression><![CDATA[$F{sallery_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="c02f316c-6827-4980-9eaf-7fe586102a64"/>
+				<text><![CDATA[sallery_name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="60" width="100" height="20" uuid="e66f002b-d98b-436b-9af5-11fba9dbfb49"/>
+				<textFieldExpression><![CDATA[$F{sallery_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

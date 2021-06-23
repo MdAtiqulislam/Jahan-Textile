@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="49ee1ee1-ef42-4f55-9a8d-e99cdebd32e8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     production_per_employee.`id` AS production_per_employee_id,
+     production_per_employee.`card_no` AS production_per_employee_card_no,
+     production_per_employee.`product` AS production_per_employee_product,
+     production_per_employee.`quantity` AS production_per_employee_quantity,
+     production_per_employee.`rate` AS production_per_employee_rate,
+     production_per_employee.`sub_total` AS production_per_employee_sub_total,
+     production_per_employee.`from_date` AS production_per_employee_from_date,
+     production_per_employee.`to_date` AS production_per_employee_to_date
+FROM
+     `production_per_employee` production_per_employee]]>
+	</queryString>
+	<field name="production_per_employee_id" class="java.lang.Integer"/>
+	<field name="production_per_employee_card_no" class="java.lang.Integer"/>
+	<field name="production_per_employee_product" class="java.lang.String"/>
+	<field name="production_per_employee_quantity" class="java.lang.Integer"/>
+	<field name="production_per_employee_rate" class="java.lang.Double"/>
+	<field name="production_per_employee_sub_total" class="java.lang.Double"/>
+	<field name="production_per_employee_from_date" class="java.lang.String"/>
+	<field name="production_per_employee_to_date" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="106" y="2" width="100" height="20" uuid="d2e85d6d-adb5-4b88-bc7f-0c4f386859db"/>
+				<text><![CDATA[production_per_employee_quantity]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="106" y="0" width="100" height="20" uuid="f88a1f1f-a84f-4be2-8b73-5d2ea753ba34"/>
+				<textFieldExpression><![CDATA[$F{production_per_employee_quantity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
